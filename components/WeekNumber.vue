@@ -1,13 +1,22 @@
 <script setup>
+
 import { ref } from 'vue'
 import dayjs from 'dayjs'
 import weekOfYear from 'dayjs/plugin/weekOfYear'
 import weekYear from 'dayjs/plugin/weekOfYear'
 
+const localeObject = {
+    name: 'locale-settings',
+    weekStart: 1,
+    weekStartsOn: 1
+}
+
+dayjs.locale('locale-settings', localeObject);
 dayjs.extend(weekOfYear)
 dayjs.extend(weekYear)
 
 const WeekNumber = ref(dayjs().week())
+
 </script>
 <template>
     <div class="flex items-center justify-center h-screen">
