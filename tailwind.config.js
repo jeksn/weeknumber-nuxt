@@ -5,6 +5,7 @@ export default {
     extend: {
       fontFamily: {
         array: ['Array', 'sans-serif'],
+        fontDisplay: 'block'
       },
     },
   },

@@ -5,4 +5,8 @@
     <Copyright />
   </div>
 </template>
-
+<style>
+body {
+  font-display: block;
+}
+</style>
