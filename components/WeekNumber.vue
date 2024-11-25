@@ -2,8 +2,8 @@
 
 import { ref } from 'vue'
 import dayjs from 'dayjs'
-import weekOfYear from 'dayjs/plugin/weekOfYear'
 import weekYear from 'dayjs/plugin/weekOfYear'
+
 
 const localeObject = {
     name: 'locale-settings',
@@ -12,7 +12,6 @@ const localeObject = {
 }
 
 dayjs.locale('locale-settings', localeObject);
-dayjs.extend(weekOfYear)
 dayjs.extend(weekYear)
 
 const WeekNumber = ref(dayjs().week())
